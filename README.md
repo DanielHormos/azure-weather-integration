@@ -1,18 +1,30 @@
-# azure-weather-integration
-Built an Azure Logic App integration that retrieves weather data from a public REST API on a scheduled basis. The workflow parses and validates the JSON response, stores valid data in Azure Blob Storage, and handles invalid responses with structured error handling using conditional logic and termination actions.
+# Azure Weather Data Integration
+Azure Logic Apps | REST API | Blob Storage | ARM Template
+![Azure](https://img.shields.io/badge/Azure-Logic%20Apps-blue)
+![IaC](https://img.shields.io/badge/IaC-ARM%20Template-green)
+![Status](https://img.shields.io/badge/status-learning-orange)
 
-This project demonstrates an Azure Logic App integration that retrieves weather data from an external API and stores it in Azure Blob Storage.
+This project demonstrates an Azure Logic App integration that retrieves weather data from a public REST API on a scheduled basis. The workflow parses and validates the JSON response, stores valid data in Azure Blob Storage, and handles invalid responses with structured error handling.
 
-Architecture
+---
 
-Recurrence Trigger
-→ HTTP Request to Weather API
-→ Parse JSON
-→ Data validation
-→ Store data in Azure Blob Storage
-→ Error handling using Terminate action
+## Architecture
 
-Technologies
+The integration follows a simple serverless workflow built with Azure Logic Apps.
+
+Recurrence Trigger  
+→ HTTP Request to Weather API  
+→ Parse JSON  
+→ Condition Validation  
+→ Store Data in Azure Blob Storage  
+→ Error Handling with Terminate
+
+
+![Logic App Workflow](screenshots/workflow.png)
+
+---
+
+## Technologies
 
 - Azure Logic Apps
 - Azure Blob Storage
@@ -20,6 +32,26 @@ Technologies
 - JSON parsing
 - Conditional logic
 - Error handling
+- Infrastructure as Code (ARM template)
 
+- ---
 
-<img width="1438" height="837" alt="image" src="https://github.com/user-attachments/assets/10ad41a4-f556-4db2-859f-ccedc9b1a105" />
+## Features
+
+- Scheduled weather data retrieval
+- Integration with external REST API
+- JSON response parsing
+- Data validation using conditional logic
+- Blob storage persistence
+- Structured error handling
+
+---
+
+## Deployment
+
+The Logic App can be deployed using the provided ARM template.
+
+az deployment group create
+--resource-group <resource-group>
+--template-file template.json
+--parameters parameters.json

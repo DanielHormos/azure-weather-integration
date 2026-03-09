@@ -20,3 +20,6 @@ Technologies
 - JSON parsing
 - Conditional logic
 - Error handling
+
+
+<img width="1438" height="837" alt="image" src="https://github.com/user-attachments/assets/10ad41a4-f556-4db2-859f-ccedc9b1a105" />

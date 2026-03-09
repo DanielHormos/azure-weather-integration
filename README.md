@@ -51,7 +51,9 @@ Recurrence Trigger
 
 The Logic App can be deployed using the provided ARM template.
 
-az deployment group create
---resource-group <resource-group>
---template-file template.json
---parameters parameters.json
+```bash
+az deployment group create \
+--resource-group <resource-group> \
+--template-file logic-app/template.json \
+--parameters logic-app/parameters.json
+```
